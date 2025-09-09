@@ -79,6 +79,6 @@
 		"@types/draft-js": "^0.11.18",
 		"@types/draftjs-to-html": "^0.8.4",
 		"@types/html-to-draftjs": "^1.5.0",
-		"@types/react-draft-wysiwyg": "^1.13.8",
+		"@types/react-draft-wysiwyg": "^1.13.8"
 	}
 }
