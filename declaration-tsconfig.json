@@ -1,0 +1,98 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noImplicitAny": false,
+    "noUnusedParameters": false,
+    "downlevelIteration": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": false,
+    "isolatedModules": true,
+    "noEmit": false,
+    "rootDir": ".",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "baseUrl": ".",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "resolveJsonModule": true,
+    "declarationDir": "dist/types",
+    "preserveConstEnums": true,
+    "checkJs": false,
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@auth/*": [
+        "src/auth/*"
+      ],
+      "@authProvider/*": [
+        "src/authProvider/*"
+      ],
+      "@fields/*": [
+        "src/fields/*"
+      ],
+      "@contentManager/*": [
+        "src/contentManager/*"
+      ],
+      "@accessManager/*": [
+        "src/accessManager/*"
+      ],
+      "@access/*": [
+        "src/access/*"
+      ],
+      "@postManager/*": [
+        "src/postManager/*"
+      ],
+      "@formManager/*": [
+        "src/formManager/*"
+      ],
+      "@client/*": [
+        "src/client/*"
+      ],
+      "@requests/*": [
+        "src/requests/*"
+      ],
+      "@sx": [
+        "src/client/system/sx/index.ts"
+      ]
+    },
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths"
+      },
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      }
+    ]
+  },
+  "include": ["src"],
+  "exclude": ["src/dev"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}

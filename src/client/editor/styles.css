@@ -1,0 +1,71 @@
+
+.rdw-image-imagewrapper {
+    width: 100%;
+    max-width: 100%;
+}
+.rdw-editor-wrapper {
+    max-width: 100%;
+
+}
+
+.rdw-editor-wrapper figure {
+    max-width: 100%;
+}
+
+.editor-error.rdw-editor-main {
+    border: 1px solid #f44336 !important;
+}
+
+.rdw-editor-main {
+    border: 1px solid #f1f1f1 !important;
+    padding: 5px !important;
+    border-radius: 2px !important;
+    height: 80% !important;
+    @media (min-width: 1199px) {
+        min-height: 300px;
+    }
+}
+
+.rdw-editor-toolbar {
+    align-items: center;
+    gap: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .darkMode & {
+        background-color: #121212;
+    }
+}
+
+
+.rdw-link-decorator-icon {
+    left: 30px;
+    bottom: 20px;
+    top: auto;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    z-index: 55;
+}
+
+
+.rdw-image-right .rdw-image-imagewrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rdw-image-center .rdw-image-imagewrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.public-DraftStyleDefault-block {
+    margin:0
+}
+
+.rdw-editor-toolbar{
+    position: sticky;
+    top:0;
+    background-color: #ffffff;
+    z-index: 44;
+}
