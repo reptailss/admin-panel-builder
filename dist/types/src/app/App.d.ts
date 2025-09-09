@@ -1,0 +1,37 @@
+import { IApp } from "./interfaces";
+import { IAuth2FaProvider, IAuthProvider } from "../auth/interfaces";
+import { IContentManager } from "../contentManager/interfaces";
+import { IPostManager } from "../postManager/interfaces";
+import { IAccessProvider } from "../access/interfaces";
+import { IAccessManager } from "../accessManager/interfaces";
+import { MultilanguagePostManager } from "../postManager/MultilanguagePostManager";
+import { IFormManager } from "../formManager/interfaces";
+export declare class App implements IApp {
+    private authProvider;
+    private accessProvider;
+    private contentManagers;
+    private postManagers;
+    private multilanguagePostManagers;
+    private accessManagers;
+    private formManagers;
+    private locales;
+    private defaultLocale;
+    setAuthProvider(authProvider: IAuthProvider | IAuth2FaProvider<any>): this;
+    getAuthProvider(): IAuthProvider | null;
+    setAccessProvider(accessProvider: IAccessProvider): this;
+    getAccessProvider(): IAccessProvider | null;
+    addContentManager(contentManager: IContentManager): this;
+    getContentManagers(): Record<string, IContentManager>;
+    addPostManager<Post extends object, CreatePost extends object>(postManager: IPostManager<Post, CreatePost>): this;
+    getPostManagers(): Record<string, IPostManager<any, any>>;
+    addMultilanguagePostManager<Post extends object, BaseField extends object, MultilanguageField extends object, Locales extends readonly string[] = string[]>(postManager: MultilanguagePostManager<Post, BaseField, MultilanguageField, Locales>): this;
+    getMultilanguagePostManagers(): Record<string, MultilanguagePostManager<any, any, any>>;
+    addFormManager<Form extends object, UpdateForm extends object>(formManager: IFormManager<Form, UpdateForm>): this;
+    getFormManagers(): Record<string, IFormManager<any, any>>;
+    addAccessManager<UserInfo extends object>(accessManager: IAccessManager<UserInfo>): this;
+    getAccessManagers(): Record<string, IAccessManager<any>>;
+    setLocales(locales: readonly string[]): this;
+    getLocales(): readonly string[];
+    setDefaultLocale(defaultLocale: string): this;
+    getDefaultLocale(): string | null;
+}
